@@ -1,0 +1,14 @@
+package com.example.newapp.model
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "news_table")
+data class NewsEntity(
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val title: String,
+    val content: String?,
+    val author: String?,
+    val url: String,
+    val urlToImage: String?
+)
